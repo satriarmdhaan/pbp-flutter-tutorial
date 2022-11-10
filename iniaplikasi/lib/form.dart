@@ -229,29 +229,31 @@ class _MyFormPageState extends State<MyFormPage> {
                                   const EdgeInsets.only(top: 20, bottom: 20),
                               shrinkWrap: true,
                               children: <Widget>[
-                                const Center(child: Text('Informasi Data')),
+                                const Center(child: Text('Informasi Data', style: TextStyle(color: Colors.blue))),
                                 const SizedBox(height: 20),
                                 Center(
-                                  child: Column(children: [
-                                    Text('Nama Lengkap: $_namaLengkap'),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                    Text('Nama Lengkap: $_namaLengkap', style: TextStyle(color: Colors.blue)),
                                     if (jenjangSarjana == true)
-                                      const Text('Jenjang: Sarjana')
+                                      const Text('Jenjang: Sarjana', style: TextStyle(color: Colors.blue))
                                     else if (jenjangDiploma == true)
-                                      const Text('Jenjang: Diploma')
+                                      const Text('Jenjang: Diploma', style: TextStyle(color: Colors.blue))
                                     else if (jenjangMagister == true)
-                                      const Text('Jenjang: Magister')
+                                      const Text('Jenjang: Magister', style: TextStyle(color: Colors.blue))
                                     else
-                                      const Text('Jenjang: Doktor'),
-                                    Text('Umur: $umur'),
-                                    Text('Kelas PBP: $kelasPBP'),
-                                    Text('Practice Mode: $_nilaiSwitch')
+                                      const Text('Jenjang: Doktor', style: TextStyle(color: Colors.blue)),
+                                    Text('Umur: $umur', style: TextStyle(color: Colors.blue)),
+                                    Text('Kelas PBP: $kelasPBP', style: TextStyle(color: Colors.blue)),
+                                    Text('Practice Mode: $_nilaiSwitch', style: TextStyle(color: Colors.blue))
                                   ]),
                                 ),
                                 TextButton(
                                   onPressed: () {
                                     Navigator.pop(context);
                                   },
-                                  child: const Text('Kembali'),
+                                  child: const Text('Kembali', style: TextStyle(color: Colors.blue)),
                                 ),
                               ],
                             ),
