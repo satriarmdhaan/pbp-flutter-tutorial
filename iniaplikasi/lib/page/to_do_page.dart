@@ -23,10 +23,9 @@ class _ToDoPageState extends State<ToDoPage> {
         "Content-Type": "application/json",
       },
     );
-
     // melakukan decode response menjadi bentuk json
     var data = jsonDecode(utf8.decode(response.bodyBytes));
-
+    
     // melakukan konversi data json menjadi object ToDo
     List<ToDo> listToDo = [];
     for (var d in data) {
@@ -34,7 +33,6 @@ class _ToDoPageState extends State<ToDoPage> {
         listToDo.add(ToDo.fromJson(d));
       }
     }
-
     return listToDo;
   }
 
