@@ -1,5 +1,6 @@
 import 'package:iniaplikasi/main.dart';
 import 'package:flutter/material.dart';
+import 'package:iniaplikasi/page/to_do_page.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
@@ -47,6 +48,16 @@ class _MyFormPageState extends State<MyFormPage> {
                 );
               },
             ),
+            ListTile(
+            title: const Text('To Do'),
+            onTap: () {
+                // Route menu ke halaman to do
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const ToDoPage()),
+                );
+            },
+        ),
           ],
         ),
       ),
@@ -235,7 +246,7 @@ class _MyFormPageState extends State<MyFormPage> {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                    Text('Nama Lengkap: $_namaLengkap', style: TextStyle(color: Colors.blue)),
+                                    Text('Nama Lengkap: $_namaLengkap', style: const TextStyle(color: Colors.blue)),
                                     if (jenjangSarjana == true)
                                       const Text('Jenjang: Sarjana', style: TextStyle(color: Colors.blue))
                                     else if (jenjangDiploma == true)
@@ -244,9 +255,9 @@ class _MyFormPageState extends State<MyFormPage> {
                                       const Text('Jenjang: Magister', style: TextStyle(color: Colors.blue))
                                     else
                                       const Text('Jenjang: Doktor', style: TextStyle(color: Colors.blue)),
-                                    Text('Umur: $umur', style: TextStyle(color: Colors.blue)),
-                                    Text('Kelas PBP: $kelasPBP', style: TextStyle(color: Colors.blue)),
-                                    Text('Practice Mode: $_nilaiSwitch', style: TextStyle(color: Colors.blue))
+                                    Text('Umur: $umur', style: const TextStyle(color: Colors.blue)),
+                                    Text('Kelas PBP: $kelasPBP', style: const TextStyle(color: Colors.blue)),
+                                    Text('Practice Mode: $_nilaiSwitch', style: const TextStyle(color: Colors.blue))
                                   ]),
                                 ),
                                 TextButton(
